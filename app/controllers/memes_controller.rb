@@ -1,5 +1,6 @@
 class MemesController < ApplicationController
   before_action :set_meme, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /memes
   # GET /memes.json
