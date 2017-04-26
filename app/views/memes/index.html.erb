@@ -12,6 +12,7 @@
                     <%= link_to 'Log In', new_user_session_path, class: "btn btn-primary" %>
                     <% else %>
                     <small>You are logged in as <%= current_user.email %></small>
+                    <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
                     <% end %>
                 </h1>
                 <center><%= link_to 'Post New Meme', new_meme_path, class: "btn btn-primary" %></center>
