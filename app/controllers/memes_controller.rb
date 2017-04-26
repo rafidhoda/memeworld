@@ -10,6 +10,7 @@ class MemesController < ApplicationController
   # GET /memes/1
   # GET /memes/1.json
   def show
+    @meme = Meme.find(params[:id])
   end
 
   # GET /memes/new
