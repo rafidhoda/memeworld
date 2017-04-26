@@ -7,6 +7,12 @@
             <div class="col-lg-12">
                 <h1 class="page-header">Meme World
                     <small>The one place for the best memes</small>
+                    <% if(!user_signed_in?) %>
+                    <%= link_to 'Register', new_user_registration_path, class: "btn btn-primary" %>
+                    <%= link_to 'Log In', new_user_session_path, class: "btn btn-primary" %>
+                    <% else %>
+                    <small>You are logged in as <%= current_user.email %></small>
+                    <% end %>
                 </h1>
                 <center><%= link_to 'Post New Meme', new_meme_path, class: "btn btn-primary" %></center>
             </div>
